@@ -9,10 +9,8 @@ const ReactMemoComponent = React.memo(() => {
   };
 
   const handleAddSkill = () => {
-    if (inputValue.length > 5) {
-      setSkills([...skills, inputValue]);
-      setInputValue("");
-    }
+    setSkills([...skills, inputValue]);
+    setInputValue("");
   };
 
   return (
@@ -26,7 +24,7 @@ const ReactMemoComponent = React.memo(() => {
         className="input"
         placeholder="Enter a skill"
       />
-      <button id="add-skill-btn" onClick={handleAddSkill} className="button">
+      <button id="skill-btn" onClick={handleAddSkill} className="button">
         Add Skill
       </button>
       <ul>

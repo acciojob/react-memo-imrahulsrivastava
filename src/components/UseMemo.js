@@ -13,15 +13,11 @@ const UseMemoComponent = () => {
   const [counter, setCounter] = useState(0);
 
   const handleAddTodo = () => {
-    setTodos([...todos, "New todo"]);
+    setTodos([...todos, "new todo"]);
   };
 
   const handleIncrement = () => {
     setCounter(counter + 1);
-  };
-
-  const handleDecrement = () => {
-    setCounter(counter - 1);
   };
 
   const calculatedValue = useMemo(() => expensiveCalculation(0), []);
@@ -32,7 +28,9 @@ const UseMemoComponent = () => {
         <h2>My todos</h2>
         <ul>
           {todos.map((todo, index) => (
-            <li key={index}>{todo}</li>
+            <li key={index} className="todo" id={`todo-${index + 1}`}>
+              {todo}
+            </li>
           ))}
         </ul>
         <button id="add-todo-btn" onClick={handleAddTodo} className="button">
@@ -43,10 +41,7 @@ const UseMemoComponent = () => {
       <section className="counter-section">
         <h2>Count: {counter}</h2>
         <button id="incr-cnt" onClick={handleIncrement} className="button">
-          +
-        </button>
-        <button id="decr-cnt" onClick={handleDecrement} className="button">
-          -
+          0
         </button>
       </section>
 
