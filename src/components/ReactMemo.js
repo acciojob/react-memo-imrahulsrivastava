@@ -9,30 +9,25 @@ const ReactMemoComponent = React.memo(() => {
   };
 
   const handleAddSkill = () => {
-    setSkills([...skills, inputValue.trim()]);
-    setInputValue("");
-  };
-
-  const handleClearSkill = () => {
-    setSkills([]);
-    setInputValue("");
+    if (inputValue.length > 5) {
+      setSkills([...skills, inputValue]);
+      setInputValue("");
+    }
   };
 
   return (
     <section className="react-memo">
       <h2>React.memo</h2>
       <input
+        id="skill-input"
         type="text"
         value={inputValue}
         onChange={handleInputChange}
         className="input"
         placeholder="Enter a skill"
       />
-      <button onClick={handleAddSkill} className="button">
+      <button id="add-skill-btn" onClick={handleAddSkill} className="button">
         Add Skill
-      </button>
-      <button onClick={handleClearSkill} className="button">
-        Clear
       </button>
       <ul>
         {skills.map((skill, index) => (
