@@ -36,7 +36,7 @@ section {
 
 .todo-section,
 .counter-section,
-.use-memo,
+#calc,
 .custom-todo-section,
 .react-memo {
   border: 1px solid #ddd;

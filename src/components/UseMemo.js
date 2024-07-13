@@ -28,7 +28,7 @@ const UseMemoComponent = () => {
         <h2>My todos</h2>
         <ul>
           {todos.map((todo, index) => (
-            <li key={index} className="todo" id={`todo-${index + 1}`}>
+            <li key={index} className="todo" id={`todo-${index}`}>
               {todo}
             </li>
           ))}
@@ -45,7 +45,7 @@ const UseMemoComponent = () => {
         </button>
       </section>
 
-      <section className="use-memo">
+      <section id="calc">
         <h2>Expensive Calculation</h2>
         <p>{calculatedValue}</p>
       </section>
