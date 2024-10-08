@@ -13,7 +13,7 @@ const UseMemoComponent = () => {
   const [counter, setCounter] = useState(0);
 
   const handleAddTodo = () => {
-    setTodos([...todos, "new todo"]);
+    setTodos([...todos, "New Todo"]);
   };
 
   const handleIncrement = () => {
@@ -40,7 +40,7 @@ const UseMemoComponent = () => {
 
       <section className="counter-section">
         <h2>Count: {counter}</h2>
-        <button id="incr-btn" onClick={handleIncrement} className="button">
+        <button id="incr-cnt" onClick={handleIncrement} className="button">
           0
         </button>
       </section>
