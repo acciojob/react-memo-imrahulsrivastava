@@ -49,7 +49,7 @@ const UseMemoComponent = () => {
       </section>
 
       <section id="calc">
-        <h2>Expensive Calculation</h2>
+        {/* <h2>Expensive Calculation</h2> */}
         <p>{calculatedValue}</p>
       </section>
     </div>
