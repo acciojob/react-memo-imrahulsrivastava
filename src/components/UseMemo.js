@@ -41,10 +41,10 @@ const UseMemoComponent = () => {
       <section className="counter-section">
         <h2>Count: {counter}</h2>
         <button id="incr-btn" onClick={handleIncrement} className="button">
-          0
+          {counter}
         </button>
         <button id="incr-cnt" onClick={handleIncrement} className="button">
-          0
+          {counter}
         </button>
       </section>
 
